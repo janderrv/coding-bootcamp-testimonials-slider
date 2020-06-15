@@ -58,27 +58,14 @@
       const next = document.getElementById("next");
       const previous = document.getElementById("previous");
       var testimonials = document.getElementsByClassName("testimonial");
-      var active = 0;
-      checkAtive = () => {
-        for (let i = 0; i < testimonials.length; i++) {
-          if (testimonials.item(i).style.display !== "none") active = i;
-        }
-      };
+
       previousClick = () => {
-        checkAtive();
-        if (active == 0) {
-          return;
-        } else {
-          testimonials.item(0).style.display = "grid";
-          testimonials.item(1).style.display = "none";
-        }
+        testimonials.item(1).style.display = "none";
+        testimonials.item(0).style.display = "grid";
       };
       nextClick = () => {
-        checkAtive();
-        if (active == 0) {
-          testimonials.item(0).style.display = "none";
-          testimonials.item(1).style.display = "grid";
-        }
+        testimonials.item(0).style.display = "none";
+        testimonials.item(1).style.display = "grid";
       };
     </script>
   </body>
