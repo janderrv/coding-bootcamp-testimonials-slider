@@ -1,0 +1,130 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 2.1rem;
+  background: url(../images/pattern-curve.svg) no-repeat fixed,
+    url(../images/pattern-bg.svg) no-repeat fixed,
+    url(../images/pattern-quotes.svg) no-repeat fixed;
+  background-position: bottom left, 88% 30%, 21.5% 12%;
+  background-size: 40%, 40%, 8%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  display: flex;
+  max-width: 1440px;
+  height: 100vh;
+}
+
+.content {
+  margin: auto;
+  display: grid;
+  height: 60%;
+  width: 75%;
+  grid-template:
+    "content"
+    "button";
+}
+
+.content > .testimonial:nth-child(2) {
+  display: none;
+}
+
+.testimonial {
+  display: grid;
+  grid-template:
+    "text image"
+    "autor image";
+  grid-template-columns: 65% 40%;
+}
+
+.text {
+  grid-area: text;
+  font-weight: 300;
+}
+.image {
+  grid-area: image;
+  z-index: -2;
+  position: relative;
+  top: -10.5%;
+  right: 12%;
+  border: 0px solid;
+  -webkit-box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  border: 0px solid;
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  right: -68%;
+  bottom: 195%;
+  -webkit-box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.button #previous {
+  background: url(../images/icon-prev.svg) no-repeat, white;
+  background-position: 50% 50%;
+  background-size: 20%;
+  padding: 15px;
+  padding-right: 15px;
+  border: 0px solid white;
+  border-radius: 10px 0px 0px 10px;
+  transition: ease-in-out 0.3s;
+}
+
+.button #previous:hover {
+  background: url(../images/icon-prev.svg) no-repeat, rgba(253, 251, 251, 0.87);
+  background-position: 50% 50%;
+  background-size: 20%;
+}
+
+.button #next {
+  background: url(../images/icon-next.svg) no-repeat, white;
+  background-position: 50% 50%;
+  background-size: 20%;
+  padding: 15px;
+  padding-left: 15px;
+  border: 0px solid white;
+  border-radius: 0 10px 10px 0;
+  transition: ease-in-out 0.3s;
+}
+
+.button #next:hover {
+  background: url(../images/icon-next.svg) no-repeat, rgba(253, 251, 251, 0.87);
+  background-position: 50% 50%;
+  background-size: 20%;
+}
+
+.autor {
+  grid-area: autor;
+  display: flex;
+  position: relative;
+  top: -45%;
+}
+.autor .name {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.autor .role {
+  font-size: 1.125rem;
+  margin-left: 1%;
+  color: hsl(240, 18%, 77%);
+}
